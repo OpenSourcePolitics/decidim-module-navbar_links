@@ -1,6 +1,9 @@
 ---
 en:
   decidim:
+    navbar_links:
+      menu:
+        links: Links
     components:
       navbar_links:
         name: NavbarLinks
