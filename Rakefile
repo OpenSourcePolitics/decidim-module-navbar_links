@@ -22,19 +22,6 @@ task test_app: "decidim:generate_external_test_app" do
 end
 
 desc "Generates a development app"
-task :development_app do
-  Bundler.with_original_env do
-    generate_decidim_app(
-        "development_app",
-        "--app_name",
-        "#{base_app_name}_development_app",
-        "--path",
-        "..",
-        "--recreate_db",
-        "--demo"
-    )
-  end
-
+task development_app: "decidim:generate_external_development_app" do
   install_module("development_app")
-  seed_db("development_app")
 end

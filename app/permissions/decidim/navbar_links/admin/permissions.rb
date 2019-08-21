@@ -6,9 +6,8 @@ module Decidim
           return permission_action unless user
           return permission_action unless permission_action.scope == :admin
 
-          unless user.admin?
-            disallow!
-            return permission_action
+          if user.admin?
+            allow! if permission_action.subject == :navbar_link
           end
 
           permission_action

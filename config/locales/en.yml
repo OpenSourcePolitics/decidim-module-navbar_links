@@ -1,9 +1,47 @@
 ---
 en:
   decidim:
-    navbar_links:
-      menu:
-        links: Links
+    admin:
+      actions:
+        add: Add
+        confirm_destroy: Confirm destroy
+        destroy: Destroy
+        edit: Edit
+      models:
+        navbar_link:
+          fields:
+            link: Link
+            title: Title
+            weight: Weight
+      navbar_links:
+        create:
+          error: Error
+          success: Success
+        destroy:
+          success: Success
+        no_links: No links
+        update:
+          error: Error
+          success: Success
+      titles:
+        navbar_links: Navbar Links
     components:
       navbar_links:
         name: NavbarLinks
+    navbar_links:
+      admin:
+        navbar_links:
+          edit:
+            title: Title
+            update: Update
+          form:
+            link: Link
+            new_tab: New tab
+            same_tab: Same tab
+            title: Title
+            weight: Weight
+          new:
+            create: Create
+            title: Title
+      menu:
+        links: Links

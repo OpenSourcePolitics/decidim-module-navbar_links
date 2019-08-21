@@ -10,8 +10,8 @@ module Decidim
       paths["lib/tasks"] = nil
 
       routes do
-        resources :links
-        root to: "links#index"
+        resources :navbar_links
+        root to: "navbar_links#index"
       end
 
       initializer "decidim_navbar_links.admin_mount_routes" do
@@ -27,7 +27,7 @@ module Decidim
       initializer "decidim_navbar_links.admin_menu" do
         Decidim.menu :admin_menu do |menu|
           menu.item I18n.t("menu.links", scope: "decidim.navbar_links"),
-                    decidim_admin_navbar_links.links_path,
+                    decidim_admin_navbar_links.navbar_links_path,
                     icon_name: "wrench",
                     position: 7.1,
                     active: :inclusive,
