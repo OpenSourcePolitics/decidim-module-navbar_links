@@ -12,13 +12,14 @@ module Decidim
 
         def new
           enforce_permission_to :new, :navbar_link
-          @form = form(NavbarLinkForm).instance
+          @form = form(Decidim::NavbarLinks::Admin::NavbarLinkForm).instance
         end
 
         def create
           enforce_permission_to :new, :navbar_link
-          @form = form(NavbarLinkForm).from_params(params)
-          CreateNavbarLink.call(@form) do
+          @form = form(Decidim::NavbarLinks::Admin::NavbarLinkForm).from_params(params)
+
+          Decidim::NavbarLinks::Admin::CreateNavbarLink.call(@form) do
             on(:ok) do
               flash[:notice] = I18n.t("navbar_links.create.success", scope: "decidim.admin")
               redirect_to navbar_links_path
@@ -33,14 +34,14 @@ module Decidim
 
         def edit
           enforce_permission_to :update, :navbar_link, navbar_link: navbar_link
-          @form = form(NavbarLinkForm).from_model(navbar_link)
+          @form = form(Decidim::NavbarLinks::Admin::NavbarLinkForm).from_model(navbar_link)
         end
 
         def update
           enforce_permission_to :update, :navbar_link, navbar_link: navbar_link
-          @form = form(NavbarLinkForm).from_params(params)
+          @form = form(Decidim::NavbarLinks::Admin::NavbarLinkForm).from_params(params)
 
-          UpdateNavbarLink.call(@form, navbar_link) do
+          Decidim::NavbarLinks::Admin::UpdateNavbarLink.call(@form, navbar_link) do
             on(:ok) do
               flash[:notice] = I18n.t("navbar_links.update.success", scope: "decidim.admin")
               redirect_to navbar_links_path
@@ -65,7 +66,7 @@ module Decidim
         private
 
         def navbar_link
-          @navbar_link = NavbarLink.find(params[:id])
+          @navbar_link = Decidim::NavbarLinks::NavbarLink.find(params[:id])
         end
       end
     end

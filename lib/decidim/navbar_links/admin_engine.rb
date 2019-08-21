@@ -16,7 +16,7 @@ module Decidim
 
       initializer "decidim_navbar_links.admin_mount_routes" do
         Decidim::Core::Engine.routes do
-          mount Decidim::NavbarLinks::AdminEngine, at: "/admin/navbar_links", as: "decidim_admin_navbar_links"
+          mount Decidim::NavbarLinks::AdminEngine, at: "/admin", as: "decidim_admin_navbar_links"
         end
       end
 
