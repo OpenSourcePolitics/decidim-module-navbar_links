@@ -7,6 +7,16 @@ en:
         confirm_destroy: Confirm destroy
         destroy: Destroy
         edit: Edit
+      menu:
+        appearance: Appearance
+        area_types: Area types
+        areas: Areas
+        configuration: Configuration
+        help_sections: Help sections
+        homepage: Homepage
+        navbar_links: Navbar links
+        scope_types: Scope types
+        scopes: Scopes
       models:
         navbar_link:
           fields:
@@ -43,5 +53,12 @@ en:
           new:
             create: Create
             title: Title
+  decidim_navbar_links:
+    admin:
       menu:
-        links: Links
+        navbar_links: Navbar links
+  layouts:
+    decidim:
+      admin:
+        settings:
+          title: Title
