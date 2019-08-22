@@ -4,8 +4,13 @@
 
 ## Usage
 
-NavbarLinks will be available as a Component for a Participatory
-Space.
+NavbarLinks adds a custom link to your decidim menu.
+
+Admin view:
+![Admin view](https://github.com/OpenSourcePolitics/decidim-module-navbar_links/blob/media/admin.png)
+
+Homepage view:
+![Home view](https://github.com/OpenSourcePolitics/decidim-module-navbar_links/blob/media/home.png)
 
 ## Installation
 
@@ -18,7 +23,9 @@ gem 'decidim-navbar_links
 And then execute:
 
 ```bash
-bundle
+$ bundle
+$ bundle exec rake decidim_navbar_links:install:migrations
+$ bundle exec rake db:migrate
 ```
 
 ## Contributing
