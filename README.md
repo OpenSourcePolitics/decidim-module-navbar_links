@@ -1,6 +1,6 @@
 # Decidim::NavbarLinks
 
-.
+[![CircleCI](https://circleci.com/gh/OpenSourcePolitics/decidim-module-navbar_links.svg?style=svg)](https://circleci.com/gh/OpenSourcePolitics/decidim-module-navbar_links)
 
 ## Usage
 
