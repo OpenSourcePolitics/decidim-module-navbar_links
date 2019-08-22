@@ -9,6 +9,10 @@ module Decidim
     class Engine < ::Rails::Engine
       isolate_namespace Decidim::NavbarLinks
 
+      initializer "decidim_navbar_link.extends" do
+        require "decidim/navbar_links/extends/organization_extend"
+      end
+
       routes do
         # Add engine routes here
         # resources :navbar_links
