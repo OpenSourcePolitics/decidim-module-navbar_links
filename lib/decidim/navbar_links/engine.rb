@@ -9,16 +9,6 @@ module Decidim
     class Engine < ::Rails::Engine
       isolate_namespace Decidim::NavbarLinks
 
-      routes do
-        # Add engine routes here
-        # resources :navbar_links
-        # root to: "navbar_links#index"
-      end
-
-      initializer "decidim_navbar_links.assets" do |app|
-        app.config.assets.precompile += %w[decidim_navbar_links_manifest.js decidim_navbar_links_manifest.css]
-      end
-
       initializer "decidim.menu" do
         Decidim.menu :menu do |menu|
           NavbarLink.organization(current_organization).each do |navbar_link|

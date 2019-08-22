@@ -36,11 +36,11 @@ module Decidim
 
         def attributes
           {
-              title: form.title,
-              link: form.link,
-              weight: form.weight,
-              target: form.target,
-              organization: form.organization
+            title: form.title,
+            link: form.link,
+            weight: form.weight,
+            target: form.target,
+            organization: form.organization
           }
         end
       end

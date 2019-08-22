@@ -10,9 +10,9 @@ module Decidim
 
         let(:title) do
           {
-              en: "title",
-              es: "title",
-              ca: "title"
+            en: "title",
+            es: "title",
+            ca: "title"
           }
         end
         let(:link) { "https://decidim.org/" }
@@ -22,16 +22,16 @@ module Decidim
 
         let(:attributes) do
           {
-              "title" => title,
-              "link" => link,
-              "target" => target,
-              "weight" => weight
+            "title" => title,
+            "link" => link,
+            "target" => target,
+            "weight" => weight
 
           }
         end
         let(:context) do
           {
-              "current_organization" => organization
+            "current_organization" => organization
           }
         end
 

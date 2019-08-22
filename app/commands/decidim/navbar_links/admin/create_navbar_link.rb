@@ -31,11 +31,11 @@ module Decidim
 
         def create_navbar_link
           Decidim::NavbarLinks::NavbarLink.create!(
-              title: form.title,
-              link: form.link,
-              weight: form.weight,
-              target: form.target,
-              organization: form.organization
+            title: form.title,
+            link: form.link,
+            weight: form.weight,
+            target: form.target,
+            organization: form.organization
           )
         end
       end

@@ -20,10 +20,6 @@ module Decidim
         end
       end
 
-      initializer "decidim_navbar_links.admin_assets" do |app|
-        app.config.assets.precompile += %w(links_admin_manifest.js)
-      end
-
       def load_seed
         nil
       end

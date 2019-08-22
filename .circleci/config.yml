@@ -40,6 +40,14 @@ jobs:
           command: bundle exec rake decidim:generate_external_test_app
 
       - run:
+          name: Run rubocop
+          command: bundle exec rubocop
+
+      - run:
+          name: Run erblint
+          command: /app/.circleci/run_erblint.sh
+
+      - run:
           name: Run RSpec tests
           command: bundle exec rspec
 

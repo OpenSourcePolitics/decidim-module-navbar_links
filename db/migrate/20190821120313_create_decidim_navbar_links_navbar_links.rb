@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CreateDecidimNavbarLinksNavbarLinks < ActiveRecord::Migration[5.2]
   def change
     create_table :decidim_navbar_links_navbar_links do |t|

@@ -17,12 +17,12 @@ module Decidim
 
         let(:form) do
           double(
-              invalid?: invalid,
-              title: title,
-              link: link,
-              weight: weight,
-              target: target,
-              organization: organization
+            invalid?: invalid,
+            title: title,
+            link: link,
+            weight: weight,
+            target: target,
+            organization: organization
           )
         end
         let(:invalid) { false }

@@ -7,14 +7,14 @@ ruby RUBY_VERSION
 gem "decidim", git: "https://github.com/decidim/decidim", branch: "0.18-stable"
 gem "decidim-navbar_links", path: "."
 
+gem "bootsnap"
 gem "puma", "~> 3.0"
 gem "uglifier", "~> 4.1"
-gem "bootsnap"
 
 group :development, :test do
   gem "byebug", "~> 10.0", platform: :mri
-  gem "faker", "~> 1.9"
   gem "decidim-dev", git: "https://github.com/decidim/decidim", branch: "0.18-stable"
+  gem "faker", "~> 1.9"
 end
 
 group :development do
