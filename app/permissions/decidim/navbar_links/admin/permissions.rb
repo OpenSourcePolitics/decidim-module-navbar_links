@@ -3,13 +3,12 @@ module Decidim
     module Admin
       class Permissions < Decidim::DefaultPermissions
         def permissions
-          return permission_action unless user
-          return permission_action unless permission_action.scope == :admin
-
-          if user.admin?
-            allow! if permission_action.subject == :navbar_link
+          if user&.admin? && permission_action.scope == :admin && permission_action.subject == :navbar_link
+            allow!
+            return permission_action
           end
 
+          disallow!
           permission_action
         end
       end

@@ -36,8 +36,15 @@ describe Decidim::NavbarLinks::Admin::Permissions do
   end
 
   describe "navbar_links" do
-    let(:action_subject) { :navbar_links }
+    let(:action_subject) { :navbar_link }
 
     it { is_expected.to eq true }
+
+    context "when user is admin" do
+      let(:action_subject) { :navbar_link }
+      let(:user) { build :user, organization: organization }
+
+      it { is_expected.to eq false }
+    end
   end
 end
