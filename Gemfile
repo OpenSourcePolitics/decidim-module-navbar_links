@@ -13,12 +13,11 @@ gem "bootsnap"
 
 group :development, :test do
   gem "byebug", "~> 10.0", platform: :mri
-
+  gem "faker", "~> 1.9"
   gem "decidim-dev", git: "https://github.com/decidim/decidim", branch: "0.18-stable"
 end
 
 group :development do
-  gem "faker", "~> 1.9"
   gem "letter_opener_web", "~> 1.3"
   gem "listen", "~> 3.1"
   gem "spring", "~> 2.0"

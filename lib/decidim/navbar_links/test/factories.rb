@@ -3,11 +3,11 @@
 require "decidim/core/test/factories"
 
 FactoryBot.define do
-  factory :navbar_links_component, parent: :component do
-    name { Decidim::Components::Namer.new(participatory_space.organization.available_locales, :navbar_links).i18n_name }
-    manifest_name :navbar_links
-    participatory_space { create(:participatory_process, :with_steps) }
+  factory :navbar_link, class: "Decidim::NavbarLinks::NavbarLink" do
+    organization
+    title { generate_localized_title }
+    link { Faker::Internet.url }
+    target { ["blank", ""].sample }
+    weight { (1..10).to_a.sample }
   end
-
-  # Add engine factories here
 end
