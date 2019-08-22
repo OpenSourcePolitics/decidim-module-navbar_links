@@ -7,7 +7,7 @@ module Decidim
 
         def index
           enforce_permission_to :index, :navbar_link
-          @navbar_links = current_organization.navbar_links
+          @navbar_links = NavbarLink.organization(current_organization)
         end
 
         def new
