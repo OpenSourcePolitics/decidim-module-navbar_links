@@ -1,6 +1,8 @@
 # Decidim::NavbarLinks
 
 [![CircleCI](https://circleci.com/gh/OpenSourcePolitics/decidim-module-navbar_links.svg?style=svg)](https://circleci.com/gh/OpenSourcePolitics/decidim-module-navbar_links)
+[![Maintainability](https://api.codeclimate.com/v1/badges/179ba669f18869b0040a/maintainability)](https://codeclimate.com/github/OpenSourcePolitics/decidim-module-navbar_links/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/179ba669f18869b0040a/test_coverage)](https://codeclimate.com/github/OpenSourcePolitics/decidim-module-navbar_links/test_coverage)
 
 ## Usage
 
