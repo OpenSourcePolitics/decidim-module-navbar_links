@@ -15,6 +15,7 @@ group :development, :test do
   gem "byebug", "~> 10.0", platform: :mri
   gem "decidim-dev", git: "https://github.com/decidim/decidim", branch: "0.18-stable"
   gem "faker", "~> 1.9"
+  gem "simplecov", require: false
 end
 
 group :development do
