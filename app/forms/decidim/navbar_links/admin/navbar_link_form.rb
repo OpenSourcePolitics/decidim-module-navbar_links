@@ -17,12 +17,6 @@ module Decidim
         validates :weight, presence: true
 
         alias organization current_organization
-
-        def link_error
-          return if link.nil?
-
-          errors.add(:link, "LINK ERROR")
-        end
       end
     end
   end
