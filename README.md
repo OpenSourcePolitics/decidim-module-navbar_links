@@ -19,7 +19,7 @@ Homepage view:
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'decidim-navbar_links
+gem 'decidim-navbar_links'
 ```
 
 And then execute:
