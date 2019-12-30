@@ -15,6 +15,7 @@ group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
   gem "decidim-dev"
   gem "faker", "~> 1.9"
+  gem "rubocop-performance"
   gem "simplecov", require: false
 end
 
