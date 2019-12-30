@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim", git: "https://github.com/decidim/decidim", branch: "0.18-stable"
+gem "decidim"
 gem "decidim-navbar_links", path: "."
 
 gem "bootsnap"
@@ -12,8 +12,8 @@ gem "puma", "~> 3.0"
 gem "uglifier", "~> 4.1"
 
 group :development, :test do
-  gem "byebug", "~> 10.0", platform: :mri
-  gem "decidim-dev", git: "https://github.com/decidim/decidim", branch: "0.18-stable"
+  gem "byebug", "~> 11.0", platform: :mri
+  gem "decidim-dev"
   gem "faker", "~> 1.9"
   gem "simplecov", require: false
 end
