@@ -1,0 +1,64 @@
+---
+sv:
+  decidim:
+    admin:
+      actions:
+        add: Lägga till
+        confirm_destroy: Bekräfta raderingen
+        destroy: Radera
+        edit: Redigera
+      menu:
+        appearance: Utseende
+        area_types: Områdestyper
+        areas: Områden
+        configuration: Konfigurering
+        help_sections: Hjälpsektioner
+        homepage: Hemsida
+        navbar_links: Navbar länkar
+        scope_types: Omfattningstyper
+        scopes: Omfattningar
+      models:
+        navbar_link:
+          fields:
+            link: Länk
+            title: Rubrik
+            weight: Vikt
+      navbar_links:
+        create:
+          error: Fel
+          success: Succé
+        destroy:
+          success: Succé
+        no_links: Inga länkar
+        update:
+          error: Fel
+          success: Succé
+      titles:
+        navbar_links: Navbar Länkar
+    components:
+      navbar_links:
+        name: NavbarLänkar
+    navbar_links:
+      admin:
+        navbar_links:
+          edit:
+            title: Rubrik
+            update: Uppdatera
+          form:
+            link: Länk
+            new_tab: Ny flik
+            same_tab: Samma flik
+            title: Rubrik
+            weight: Vikt
+          new:
+            create: Skapa
+            title: Rubrik
+  decidim_navbar_links:
+    admin:
+      menu:
+        navbar_links: Navbar länkar
+  layouts:
+    decidim:
+      admin:
+        settings:
+          title: Rubrik
