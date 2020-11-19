@@ -4,16 +4,16 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim"
+gem "decidim", git: "https://github.com/decidim/decidim", branch: "release/0.23-stable"
 gem "decidim-navbar_links", path: "."
 
-gem "bootsnap"
-gem "puma", "~> 3.0"
+gem "bootsnap", "~> 1.3"
+gem "puma", "~> 4.3.3"
 gem "uglifier", "~> 4.1"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
-  gem "decidim-dev"
+  gem "decidim-dev", git: "https://github.com/decidim/decidim", branch: "release/0.23-stable"
   gem "faker", "~> 1.9"
   gem "rubocop-performance"
   gem "simplecov", require: false
