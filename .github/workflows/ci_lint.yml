@@ -1,0 +1,47 @@
+name: "[CI] NavbarLinks"
+on:
+  push:
+    branches:
+      - develop
+      - master
+      - release/*
+      - feature/*
+      - "*-stable"
+  pull_request:
+    branches:
+      - "*"
+
+env:
+  CI: "true"
+  SIMPLECOV: "true"
+  RUBY_VERSION: 2.6.6
+  DECIDIM_MODULE: .
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: rokroskar/workflow-run-cleanup-action@v0.2.2
+        if: "github.ref != 'refs/heads/master' || github.ref != 'refs/heads/develop'"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - uses: actions/checkout@v2.0.0
+        with:
+          fetch-depth: 1
+      - uses: ruby/setup-ruby@master
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+      - name: Recover Ruby dependency cache
+        uses: actions/cache@v1
+        with:
+          path: ./vendor/bundle
+          key: ${{ runner.OS }}-rubydeps-${{ hashFiles('Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.OS }}-rubydeps-${{ env.cache-name }}-
+            ${{ runner.OS }}-rubydeps-
+            ${{ runner.OS }}-
+      - run: bundle install --path vendor/bundle --jobs 4 --retry 3
+        name: Install Ruby deps
+      - run: bundle exec rubocop -P
+        name: Lint ruby files
