@@ -11,7 +11,7 @@ module Decidim
 
       initializer "decidim.menu" do
         Decidim.menu :menu do |menu|
-          NavbarLink.organization(current_organization).each do |navbar_link|
+          NavbarLink.organization(current_organization).ordered.each do |navbar_link|
             menu.item translated_attribute(navbar_link.title),
                       navbar_link.link,
                       position: 5,
