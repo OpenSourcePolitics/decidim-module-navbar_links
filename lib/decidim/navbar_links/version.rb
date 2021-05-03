@@ -4,7 +4,7 @@ module Decidim
   # This holds the decidim-meetings version.
   module NavbarLinks
     def self.version
-      "0.23.2"
+      "0.23.5"
     end
   end
 end
