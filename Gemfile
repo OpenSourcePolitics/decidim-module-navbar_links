@@ -3,18 +3,15 @@
 source "https://rubygems.org"
 
 ruby RUBY_VERSION
-
-gem "decidim"
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "develop" }
+gem "decidim", DECIDIM_VERSION
 gem "decidim-navbar_links", path: "."
 
 gem "bootsnap"
-gem "puma", "~> 3.0"
 gem "uglifier", "~> 4.1"
 
 group :development, :test do
-  gem "byebug", "~> 11.0", platform: :mri
-  gem "decidim-dev"
-  gem "faker", "~> 1.9"
+  gem "decidim-dev", DECIDIM_VERSION
   gem "rubocop-performance"
   gem "simplecov", require: false
 end
