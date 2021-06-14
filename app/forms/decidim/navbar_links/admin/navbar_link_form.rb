@@ -12,7 +12,7 @@ module Decidim
         attribute :weight, Integer
         attribute :target, String
 
-        validates :link, format: { with: URI.regexp(%w(http https)) }, presence: true
+        validates :link, format: { with: URI::DEFAULT_PARSER.make_regexp(%w(http https)) }, presence: true
         validates :title, translatable_presence: true
         validates :weight, presence: true
 

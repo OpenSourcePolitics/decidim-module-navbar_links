@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email = ["fardeauarmand@gmail.com"]
   s.license = "AGPL-3.0"
   s.homepage = "https://github.com/decidim/decidim-module-navbar_links"
-  s.required_ruby_version = ">= 2.5"
+  s.required_ruby_version = ">= 2.7.1"
 
   s.name = "decidim-navbar_links"
   s.summary = "A decidim navbar_links module"
