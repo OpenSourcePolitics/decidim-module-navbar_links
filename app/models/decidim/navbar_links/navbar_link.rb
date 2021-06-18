@@ -5,7 +5,7 @@ module Decidim
     class NavbarLink < ApplicationRecord
       belongs_to :organization, foreign_key: "decidim_organization_id", class_name: "Decidim::Organization"
       scope :organization, ->(organization) { where(organization: organization) }
-      scope :ordered, -> { order(:weight)}
+      scope :ordered, -> { order(:weight) }
 
       before_save :validate_link_regex
 
