@@ -4,7 +4,7 @@ module Decidim
   module NavbarLinks
     module Admin
       # A command with all the business logic when creating a static NavbarLink.
-      class CreateNavbarLink < Rectify::Command
+      class CreateNavbarLink < Decidim::Command
         # Public: Initializes the command.
         #
         # form - A form object with the params.

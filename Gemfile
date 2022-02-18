@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 ruby RUBY_VERSION
-DECIDIM_VERSION = { github: "decidim/decidim", branch: "develop" }
+DECIDIM_VERSION = { github: "decidim/decidim", branch: "develop", ref: '56505fb62394c5723b02d48701f3bed251344a7d' }
 gem "decidim", DECIDIM_VERSION
 gem "decidim-navbar_links", path: "."
 
@@ -11,6 +11,8 @@ gem "bootsnap"
 gem "uglifier", "~> 4.1"
 
 group :development, :test do
+  gem "faker", "~> 2.18"
+
   gem "decidim-dev", DECIDIM_VERSION
   gem "rubocop-performance"
   gem "simplecov", require: false
@@ -22,4 +24,8 @@ group :development do
   gem "spring", "~> 2.0"
   gem "spring-watcher-listen", "~> 2.0"
   gem "web-console", "~> 3.5"
+end
+
+group :test do
+  gem "rubocop-faker"
 end
