@@ -22,7 +22,7 @@ cs:
           fields:
             link: Odkaz
             title: Nadpis
-            weight: Důležitos
+            weight: Důležitost
       navbar_links:
         create:
           error: Chyba
