@@ -4,7 +4,7 @@ module Decidim
   module NavbarLinks
     module Admin
       # A form object to create or update scopes.
-      class NavbarLinkForm < Form
+      class NavbarLinkForm < Decidim::Form
         include TranslatableAttributes
 
         translatable_attribute :title, String
