@@ -1,0 +1,64 @@
+---
+cs:
+  decidim:
+    admin:
+      actions:
+        add: Přidat
+        confirm_destroy: Potvrdit smazání
+        destroy: Smazat
+        edit: Upravit
+      menu:
+        appearance: Vzhled
+        area_types: Typy oblastí
+        areas: Oblasti
+        configuration: Konfigurace
+        help_sections: Sekce nápovědy
+        homepage: Domovská stránka
+        navbar_links: Odkazy navigační lišty
+        scope_types: Typy oblastí
+        scopes: Oblasti
+      models:
+        navbar_link:
+          fields:
+            link: Odkaz
+            title: Nadpis
+            weight: Důležitost
+      navbar_links:
+        create:
+          error: Chyba
+          success: Úspěch
+        destroy:
+          success: Úspěch
+        no_links: Žádné odkazy
+        update:
+          error: Chyba
+          success: Úspěch
+      titles:
+        navbar_links: Odkazy navigační lišty
+    components:
+      navbar_links:
+        name: Odkazy navigační lišty
+    navbar_links:
+      admin:
+        navbar_links:
+          edit:
+            title: Název
+            update: Aktualizace
+          form:
+            link: Odkaz
+            new_tab: Nová záložka
+            same_tab: Stejná záložka
+            title: Nadpis
+            weight: Důležitost
+          new:
+            create: Vytvořit
+            title: Nadpis
+  decidim_navbar_links:
+    admin:
+      menu:
+        navbar_links: Odkazy navigační lišty
+  layouts:
+    decidim:
+      admin:
+        settings:
+          title: Nadpis
